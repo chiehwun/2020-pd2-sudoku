@@ -1,0 +1,42 @@
+Running with gitlab-runner 11.5.1 (7f00c780)
+  on Runner on main server 089ef9b8
+Using Shell executor...
+section_start:1586114402:prepare_script
+Running on pd2...
+section_end:1586114402:prepare_script
+section_start:1586114402:get_sources
+Fetching changes...
+Removing generate
+Removing platform_env
+Removing solve
+Removing transform
+HEAD is now at a85a069 SUDOKU_SOLVER 2.0 1. Include "Unit Exclusive Method" 2. Faster solution 3. Faster way to determine non-solution cases
+Checking out a85a0693 as master...
+Skipping Git submodules setup
+section_end:1586114402:get_sources
+section_start:1586114402:restore_cache
+section_end:1586114402:restore_cache
+section_start:1586114402:download_artifacts
+Downloading artifacts for Build with Makefile (5%) (69662)...
+Runtime platform                                    arch=amd64 os=linux pid=31519 revision=7f00c780 version=11.5.1
+Downloading artifacts from coordinator... ok        id=69662 responseStatus=200 OK token=JUGv8ztz
+section_end:1586114402:download_artifacts
+section_start:1586114402:build_script
+$ sudoku-judge -mode=speed -base=`pwd` -prob=/home/hty/testfile/speeeed -level=2
+Timeout: 1
+Timeout: 2
+Timeout: 3
+Timeout: 4
+Timeout: 5
+Total: 171437.354955
+Average: 1714.3735495499998
+section_end:1586114624:build_script
+section_start:1586114624:after_script
+section_end:1586114624:after_script
+section_start:1586114624:upload_artifacts_on_failure
+Uploading artifacts...
+Runtime platform                                    arch=amd64 os=linux pid=8706 revision=7f00c780 version=11.5.1
+WARNING: crashed: no matching files
+ERROR: No files to upload
+section_end:1586114624:upload_artifacts_on_failure
+ERROR: Job failed: exit status 1

@@ -1,3 +1,8 @@
+.*.swp
+generate
+transform
+solve
+crashed
 # Prerequisites
 *.d
 
